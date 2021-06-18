@@ -1,0 +1,36 @@
+@use '../abstracts/variables';
+
+@use '../base/animations';
+
+.btn {
+  transition: all;
+  transition-duration: 0.2s;
+  border-radius: 10rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.3);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.4);
+  }
+
+  &--animated {
+    animation: moveInBot 1s 0.75s ease-in-out backwards;
+  }
+
+  &--white {
+    background-color: variables.$color-white;
+    color: hsl(0, 0%, 47%);
+  }
+}
