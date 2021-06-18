@@ -1,5 +1,34 @@
-.c1 {
-  color: red;
-  font-size: 5em;
-  background-color: black;
+$primary-color-light: hsl(175, 87%, 80%);
+$primary-color-medium: hsl(175, 87%, 55%);
+$primary-color-dark: hsl(175, 87%, 30%);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 25px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($primary-color-light, 0.7),
+      rgba($primary-color-dark, 0.7)
+    ),
+    url(../assets/images/Hero11.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
 }
