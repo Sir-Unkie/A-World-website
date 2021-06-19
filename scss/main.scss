@@ -1,7 +1,6 @@
 @use './abstracts/functions';
 @use './abstracts/mixins';
 @use './abstracts/variables';
-
 @use './base/base';
 @use './base/animations';
 @use './base/typography';
@@ -9,3 +8,4 @@
 @use './layout/header';
 @use './pages/home';
 @use './components/button';
+@use './components/composition';

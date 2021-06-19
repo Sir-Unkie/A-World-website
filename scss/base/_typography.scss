@@ -34,7 +34,7 @@ body {
       filter: drop-shadow(0px 0px 10px variables.$secondary-color-medium)
         drop-shadow(0px 0px 20px rgba(variables.$secondary-color-medium, 0.678))
         drop-shadow(0px 0px 26px rgba(variables.$secondary-color-light, 0.507));
-      cursor: pointer;
+      cursor: default;
       //   color: hsl(175, 100%, 82%);
       color: variables.$color-white;
     }
@@ -48,4 +48,32 @@ body {
     animation: moveInRight 1s ease-in-out;
     margin-bottom: 5rem;
   }
+}
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(
+    to right,
+    variables.$primary-color-medium,
+    variables.$primary-color-dark
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragrapgh {
+  font-size: 1.6rem;
 }

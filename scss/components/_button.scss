@@ -34,3 +34,28 @@
     color: hsl(0, 0%, 47%);
   }
 }
+
+.btn-text {
+  transition: all 0.2s;
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: variables.$primary-color-dark;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.1rem solid variables.$primary-color-dark;
+    padding: 0.3rem;
+  }
+
+  &:hover {
+    background-color: variables.$primary-color-dark;
+    color: variables.$color-white;
+    box-shadow: 0 1rem 2rem rgba(black, 0.15);
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(black, 0.25);
+    transform: translateY(0rem);
+  }
+}
