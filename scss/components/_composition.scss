@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .composition {
   position: relative;
 }
@@ -5,8 +7,11 @@
 .composition__photo {
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
-  border-radius: 0.7rem;
+  border-radius: 0.6rem;
   position: absolute;
+  transition: all 0.2s;
+  z-index: 10;
+  outline-offset: 2rem;
   &--p1 {
     left: 0;
     top: -2rem;
@@ -18,5 +23,14 @@
   &--p3 {
     left: 20%;
     top: 10rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2.5rem 4.5rem rgba(black, 0.5),
+      0 -0.5rem 0rem variables.$secondary-color-medium;
+    z-index: 20;
+
+    // outline: 0.2rem solid (variables.$primary-color-medium);
   }
 }
