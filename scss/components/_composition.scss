@@ -7,11 +7,10 @@
 .composition__photo {
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
-  border-radius: 0.6rem;
+  border-radius: 0.7rem;
   position: absolute;
   transition: all 0.2s;
   z-index: 10;
-  outline-offset: 2rem;
   &--p1 {
     left: 0;
     top: -2rem;
@@ -26,11 +25,9 @@
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-1rem);
     box-shadow: 0 2.5rem 4.5rem rgba(black, 0.5),
       0 -0.5rem 0rem variables.$secondary-color-medium;
     z-index: 20;
-
-    // outline: 0.2rem solid (variables.$primary-color-medium);
   }
 }

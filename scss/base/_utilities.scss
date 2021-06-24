@@ -20,10 +20,29 @@
   margin: 0 auto;
 }
 
+.u-grid-3 {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.u-grid-4 {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .u-width-half {
   width: 50%;
 }
 
 .u-gap-2 {
+  gap: 2rem;
+}
+.u-gap-4 {
   gap: 4rem;
+}
+.u-gap-6 {
+  gap: 6rem;
 }

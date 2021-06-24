@@ -145,12 +145,34 @@ body {
   margin: 0 auto;
 }
 
+.u-grid-3 {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.u-grid-4 {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .u-width-half {
   width: 50%;
 }
 
 .u-gap-2 {
+  gap: 2rem;
+}
+
+.u-gap-4 {
   gap: 4rem;
+}
+
+.u-gap-6 {
+  gap: 6rem;
 }
 
 .header {
@@ -159,7 +181,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../assets/images/Hero11.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
 .header__logo-box {
   position: absolute;
@@ -179,8 +201,22 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  margin-top: -20vh;
-  padding: 25rem 0;
+  margin-top: -24rem;
+  padding: 28rem 0 35rem 0rem;
+}
+
+.section-features {
+  background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../../assets/images/Hero10.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%);
+  margin-top: -24rem;
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  margin-top: -24rem;
+  padding: 35rem 0 35rem 0rem;
 }
 
 .btn {
@@ -239,11 +275,10 @@ body {
 .composition__photo {
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-  border-radius: 0.6rem;
+  border-radius: 0.7rem;
   position: absolute;
   transition: all 0.2s;
   z-index: 10;
-  outline-offset: 2rem;
 }
 .composition__photo--p1 {
   left: 0;
@@ -258,9 +293,86 @@ body {
   top: 10rem;
 }
 .composition__photo:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-1rem);
   box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.5), 0 -0.5rem 0rem #ffda33;
   z-index: 20;
+}
+
+.feature-box {
+  margin: 26rem 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.feature-box:hover {
+  transform: scale(1.02) translateY(-1rem);
+}
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #28f0df, #0a8f84);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+}
+.card__side {
+  min-height: 50rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+.card__side--front {
+  background-color: white;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background: linear-gradient(to right bottom, #fab433, #ae7304);
+}
+.card__side--back-2 {
+  background: linear-gradient(to right bottom, #28f0df, #0a8f84);
+}
+.card__side--back-3 {
+  background: linear-gradient(to right bottom, #6b68fd, #1409aa);
+}
+.card__side .card__picture {
+  background-size: cover;
+  background-position: center;
+  height: 23rem;
+  background-blend-mode: screen;
+}
+.card__side .card__picture--1 {
+  background-image: linear-gradient(to right bottom, #fa9600, #d19410), url("../../assets/images/Hero6.jpg");
+}
+.card__side .card__picture--2 {
+  background-image: linear-gradient(to right bottom, #28f0df, #0a8f84), url("../../assets/images/Hero5.jpg");
+}
+.card__side .card__picture--3 {
+  background-image: linear-gradient(to right bottom, #6b68fd, #1409aa), url("../../assets/images/Hero2.jpg");
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
