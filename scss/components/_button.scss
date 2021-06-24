@@ -33,6 +33,11 @@
     background-color: variables.$color-white;
     color: hsl(0, 0%, 47%);
   }
+  &--green {
+    background-color: darken(variables.$primary-color-medium, 15%);
+    // color: hsl(0, 0%, 47%);
+    color: white;
+  }
 }
 
 .btn-text {
