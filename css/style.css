@@ -145,6 +145,10 @@ body {
   margin-top: 8rem;
 }
 
+.u-mt-huge {
+  margin-top: 11rem;
+}
+
 .u-flex {
   display: flex;
   flex-direction: row;
@@ -181,6 +185,11 @@ body {
 
 .u-gap-6 {
   gap: 6rem;
+}
+
+.u-container {
+  width: 80%;
+  margin: auto;
 }
 
 .header {
@@ -225,6 +234,11 @@ body {
   background-color: #f7f7f7;
   margin-top: -24rem;
   padding: 35rem 0 20rem 0rem;
+}
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
 }
 
 .btn {
@@ -447,6 +461,56 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 200;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  min-height: 21rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 3rem 2rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  margin: 5rem auto;
+}
+.story__shape {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  transform: translateX(-3rem);
+  position: relative;
+  backface-visibility: hidden;
+}
+.story__img {
+  width: 100%;
+  transform: scale(1.2);
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(80%);
 }
 
 /*# sourceMappingURL=style.css.map */
