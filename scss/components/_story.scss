@@ -5,12 +5,13 @@
   margin: 0 auto;
   min-height: 21rem;
   box-shadow: 0 3rem 6rem rgba(black, 0.1);
-  background-color: variables.$color-white;
+  background-color: rgba(variables.$color-white, 0.7);
   border-radius: 0.3rem;
   padding: 3rem 2rem;
   padding-left: 9rem;
   font-size: 1.6rem;
   margin: 5rem auto;
+  border-radius: 2rem;
 
   &__shape {
     width: 15rem;
