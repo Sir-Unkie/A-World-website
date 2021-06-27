@@ -1,0 +1,31 @@
+.footer__grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+  background-color: #333;
+  padding: 5rem 0;
+  font-size: 1.4rem;
+
+  &__logo-box {
+    width: 15rem;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}

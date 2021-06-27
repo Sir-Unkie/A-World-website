@@ -6,18 +6,24 @@
   transition: all;
   transition-duration: 0.2s;
   border-radius: 10rem;
-
+  &,
   &:link,
   &:visited {
     text-decoration: none;
     text-transform: uppercase;
     padding: 1.5rem 4rem;
     display: inline-block;
+
+    // changes for the <button element>
+    border: none;
+    cursor: pointer;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.3);
+    outline: none;
   }
 
   &:active {
