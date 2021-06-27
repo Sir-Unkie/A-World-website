@@ -579,4 +579,38 @@ body {
   object-fit: cover;
 }
 
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  border-radius: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  display: block;
+  width: 90%;
+  color: #3d3d3d;
+}
+.form__input::-webkit-input-placeholder {
+  color: #787878;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #28f0df;
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff5e00;
+}
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
