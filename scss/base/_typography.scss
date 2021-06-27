@@ -58,7 +58,7 @@ body {
   letter-spacing: 0.2rem;
   background-image: linear-gradient(
     to right,
-    variables.$primary-color-medium,
+    darken(variables.$primary-color-medium, 15%),
     variables.$primary-color-dark
   );
   -webkit-background-clip: text;

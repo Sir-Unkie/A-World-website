@@ -103,7 +103,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2rem;
-  background-image: linear-gradient(to right, #28f0df, #0a8f84);
+  background-image: linear-gradient(to right, #0dbfb0, #0a8f84);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -155,6 +155,12 @@ body {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+}
+
+.u-grid {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
 }
 
 .u-grid-3 {
@@ -241,6 +247,24 @@ body {
   padding: 5rem 0;
 }
 
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #a0f8f1, #0a8f84);
+}
+
+.book {
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  background-position: center;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../../assets/images/Hero4.jpg");
+  background-size: cover;
+  height: 50rem;
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
+}
+
 .btn {
   transition: all;
   transition-duration: 0.2s;
@@ -324,6 +348,15 @@ body {
   z-index: 20;
 }
 
+.features {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media (max-width: 900px) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .feature-box {
   margin: 26rem 0;
   background-color: rgba(255, 255, 255, 0.75);
@@ -335,6 +368,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
+@media (max-width: 900px) {
+  .feature-box {
+    margin: 2rem 0;
+  }
+}
 .feature-box:hover {
   transform: scale(1.02) translateY(-1rem);
 }
@@ -345,6 +383,15 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.cards {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {
@@ -492,6 +539,9 @@ body {
   transition: all 0.5s;
   backface-visibility: hidden;
 }
+.story__text {
+  color: rgba(0, 0, 0, 0.75);
+}
 .story__caption {
   position: absolute;
   top: 50%;
@@ -525,7 +575,7 @@ body {
 }
 .bg-video__content {
   width: 100%;
-  height: 103%;
+  height: 100%;
   object-fit: cover;
 }
 

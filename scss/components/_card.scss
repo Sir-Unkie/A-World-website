@@ -1,5 +1,12 @@
 @use '../abstracts/variables';
 
+.cards {
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;

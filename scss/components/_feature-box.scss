@@ -1,7 +1,17 @@
 @use '../abstracts/variables';
 
+.features {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .feature-box {
   margin: 26rem 0;
+  @media (max-width: 900px) {
+    margin: 2rem 0;
+  }
   background-color: rgba(variables.$color-white, 0.75);
   width: 100%;
   font-size: 1.5rem;
