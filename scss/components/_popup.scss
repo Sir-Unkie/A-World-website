@@ -11,6 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  //   display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
   &__content {
     width: 75%;
     background-color: white;
@@ -19,12 +29,20 @@
     display: flex;
     gap: 6rem;
     padding: 2rem;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 0.3s 0.2s;
+  }
+  &:target &__content {
+    transform: scale(1);
+    opacity: 1;
   }
 
   &__left {
     width: 40%;
   }
   &__right {
+    position: relative;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -44,5 +62,24 @@
     column-gap: 4rem;
     column-rule: 1px solid variables.$color-grey-light-2;
     hyphens: auto;
+  }
+
+  &__close {
+    transition: all 0.3s;
+    &:link,
+    &:visited {
+      color: variables.$color-grey-dark;
+      text-decoration: none;
+      font-size: 3rem;
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      display: inline-block;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: variables.$primary-color-medium;
+    }
   }
 }
