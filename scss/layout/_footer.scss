@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .footer__grid {
   grid-template-columns: 1fr 1fr;
 }
@@ -10,7 +12,7 @@
   &__logo-box {
     width: 15rem;
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
   }
   &__logo {
     width: 15rem;
@@ -18,14 +20,36 @@
   }
 
   &__navigation {
+    border-top: 0.1rem solid variables.$color-grey-dark;
+    padding-top: 1rem;
   }
 
   &__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
   }
 
   &__item {
   }
 
   &__link {
+    &:link,
+    &:visited {
+      color: variables.$color-grey-dark;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: variables.$primary-color-medium;
+      box-shadow: 0 1rem 2rem rgba(rgb(0, 0, 0), 0.4);
+    }
+  }
+  .footer_copyright {
+    border-top: 0.1rem solid variables.$color-grey-dark;
+    padding-top: 1rem;
   }
 }
