@@ -1,7 +1,12 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .composition {
   position: relative;
+  height: 0;
+  @include mixins.respond(tab-land) {
+    padding-bottom: 55%;
+  }
 }
 
 .composition__photo {

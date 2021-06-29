@@ -1,0 +1,19 @@
+@use "../abstracts/mixins";
+
+.about__container {
+  display: flex;
+  gap: 6rem;
+  width: 80%;
+  margin: auto;
+  @include mixins.respond(tab-land) {
+    flex-direction: column-reverse;
+  }
+}
+
+.about__text,
+.about__images {
+  width: 50%;
+  @include mixins.respond(tab-land) {
+    width: 100%;
+  }
+}

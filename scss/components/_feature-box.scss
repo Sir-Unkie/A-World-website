@@ -1,15 +1,26 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .features {
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  @media (max-width: 900px) {
+  gap: 6rem;
+  @include mixins.respond(tab-land) {
     grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  @include mixins.respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+  @include mixins.respond(phone) {
+    grid-template-columns: 1fr;
+    gap: 0rem;
   }
 }
 
 .feature-box {
   margin: 26rem 0;
-  @media (max-width: 900px) {
+  @include mixins.respond(tab-land) {
     margin: 2rem 0;
   }
   background-color: rgba(variables.$color-white, 0.75);

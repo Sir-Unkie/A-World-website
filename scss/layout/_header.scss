@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .header {
   position: relative;
@@ -12,6 +13,12 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  @include mixins.respond(tab-land) {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  }
+  @include mixins.respond(phone) {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  }
 
   &__logo-box {
     position: absolute;
