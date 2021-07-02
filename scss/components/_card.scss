@@ -15,13 +15,6 @@
   position: relative;
   height: 54rem;
 
-  @include mixins.respond(tab-port) {
-    width: 70%;
-  }
-  @include mixins.respond(phone) {
-    width: 100%;
-  }
-
   &__side {
     height: 54rem;
     transition: all 0.8s ease;
@@ -184,5 +177,176 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 200;
+  }
+
+  @include mixins.respond(tab-port) {
+    height: auto;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+    &__side {
+      height: auto;
+      transition: all 0.8s ease;
+      position: relative;
+      box-shadow: none;
+
+      &--front {
+        background-color: variables.$color-white;
+      }
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+        &-1 {
+          background: linear-gradient(
+            to right bottom,
+            hsl(39, 95%, 59%),
+            hsl(39, 95%, 35%)
+          );
+        }
+        &-2 {
+          background: linear-gradient(
+            to right bottom,
+            variables.$primary-color-medium,
+            variables.$primary-color-dark
+          );
+        }
+        &-3 {
+          background: linear-gradient(
+            to right bottom,
+            hsl(241, 97%, 70%),
+            hsl(244, 90%, 35%)
+          );
+        }
+      }
+
+      // front side styling
+      .card__picture {
+        background-size: cover;
+        background-position: center;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+          background-image: linear-gradient(
+              to right bottom,
+              hsl(36, 100%, 49%),
+              hsl(41, 86%, 44%)
+            ),
+            url('../../assets/images/Hero6.jpg');
+        }
+        &--2 {
+          background-image: linear-gradient(
+              to right bottom,
+              variables.$primary-color-medium,
+              variables.$primary-color-dark
+            ),
+            url('../../assets/images/Hero5.jpg');
+        }
+        &--3 {
+          background-image: linear-gradient(
+              to right bottom,
+              hsl(241, 97%, 70%),
+              hsl(244, 90%, 35%)
+            ),
+            url('../../assets/images/Hero2.jpg');
+        }
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+
+    &__heading {
+      font-size: 2.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: absolute;
+      text-align: right;
+      top: 12rem;
+      right: 2rem;
+      color: variables.$color-white;
+    }
+    &__heading-span {
+      padding: 1rem 1.5rem;
+
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          hsla(39, 95%, 59%, 0.85),
+          hsla(39, 96%, 35%, 0.85)
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba(variables.$primary-color-medium, 0.85),
+          rgba(variables.$primary-color-dark, 0.85)
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          hsla(241, 97%, 70%, 0.863),
+          hsl(244, 90%, 35%, 0.863)
+        );
+      }
+    }
+
+    &__details {
+      padding: 2rem;
+      ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 1rem;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid variables.$color-grey-light-2;
+          }
+        }
+      }
+    }
+
+    &__cta {
+      position: relative;
+      text-align: center;
+      top: 0;
+      left: 0;
+      transform: translate(0%, 0%);
+      padding: 7rem 4rem 4rem 4rem;
+    }
+    &__price-box {
+      color: white;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    &__price-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 200;
+    }
+  }
+
+  @include mixins.respond(phone) {
+    width: 100%;
   }
 }

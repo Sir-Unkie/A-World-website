@@ -556,16 +556,6 @@ body {
   position: relative;
   height: 54rem;
 }
-@media screen and (max-width: 56.25em) {
-  .card {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 37.5em) {
-  .card {
-    width: 100%;
-  }
-}
 .card__side {
   height: 54rem;
   transition: all 0.8s ease;
@@ -674,6 +664,124 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 200;
+}
+@media screen and (max-width: 56.25em) {
+  .card {
+    height: auto;
+    width: 70%;
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    height: auto;
+    transition: all 0.8s ease;
+    position: relative;
+    box-shadow: none;
+  }
+  .card__side--front {
+    background-color: white;
+  }
+  .card__side--back {
+    transform: rotateY(0deg);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .card__side--back-1 {
+    background: linear-gradient(to right bottom, #fab433, #ae7304);
+  }
+  .card__side--back-2 {
+    background: linear-gradient(to right bottom, #28f0df, #0a8f84);
+  }
+  .card__side--back-3 {
+    background: linear-gradient(to right bottom, #6b68fd, #1409aa);
+  }
+  .card__side .card__picture {
+    background-size: cover;
+    background-position: center;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  .card__side .card__picture--1 {
+    background-image: linear-gradient(to right bottom, #fa9600, #d19410), url("../../assets/images/Hero6.jpg");
+  }
+  .card__side .card__picture--2 {
+    background-image: linear-gradient(to right bottom, #28f0df, #0a8f84), url("../../assets/images/Hero5.jpg");
+  }
+  .card__side .card__picture--3 {
+    background-image: linear-gradient(to right bottom, #6b68fd, #1409aa), url("../../assets/images/Hero2.jpg");
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0deg);
+  }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg);
+  }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: right;
+    top: 12rem;
+    right: 2rem;
+    color: white;
+  }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .card__heading-span--1 {
+    background-image: linear-gradient(to right bottom, rgba(250, 180, 51, 0.85), rgba(175, 115, 4, 0.85));
+  }
+  .card__heading-span--2 {
+    background-image: linear-gradient(to right bottom, rgba(40, 240, 223, 0.85), rgba(10, 143, 132, 0.85));
+  }
+  .card__heading-span--3 {
+    background-image: linear-gradient(to right bottom, rgba(107, 104, 253, 0.863), rgba(20, 9, 170, 0.863));
+  }
+  .card__details {
+    padding: 2rem;
+  }
+  .card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card__details ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .card__details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  .card__cta {
+    position: relative;
+    text-align: center;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .card__price-box {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 200;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .card {
+    width: 100%;
+  }
 }
 
 .story {
@@ -850,8 +958,13 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup--visible {
   opacity: 1;
   visibility: visible;
 }
@@ -866,6 +979,12 @@ body {
   opacity: 0;
   transform: scale(0.3);
   transition: all 0.3s 0.2s;
+  z-index: 20;
+  cursor: default;
+}
+.popup__content--visible {
+  transform: scale(1);
+  opacity: 1;
 }
 .popup:target .popup__content {
   transform: scale(1);
