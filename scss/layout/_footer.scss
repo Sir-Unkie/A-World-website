@@ -1,40 +1,56 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .footer__container {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  border: 1px solid red;
   width: 80%;
   margin: auto;
-  flex-wrap: wrap;
+
+  @include mixins.respond(tab-port) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  // flex-wrap: wrap;
 }
 
 .footer {
   background-color: #333;
   padding: 5rem 0;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__logo-box {
-    width: 7rem;
+    width: 15rem;
     margin: auto;
     margin-bottom: 6rem;
   }
   &__logo {
     width: 15rem;
     height: auto;
+    margin: auto;
   }
 
   &__navigation {
     border-top: 0.1rem solid variables.$color-grey-dark;
     padding-top: 1rem;
     width: 50%;
+
+    @include mixins.respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__list {
     list-style: none;
     display: flex;
     gap: 2rem;
+    @include mixins.respond(phone) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -59,5 +75,8 @@
     width: 50%;
     border-top: 0.1rem solid variables.$color-grey-dark;
     padding-top: 1rem;
+    @include mixins.respond(tab-port) {
+      width: 100%;
+    }
   }
 }

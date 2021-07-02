@@ -274,35 +274,53 @@ body {
   display: flex;
   flex-direction: row;
   gap: 4rem;
-  border: 1px solid red;
   width: 80%;
   margin: auto;
-  flex-wrap: wrap;
+}
+@media screen and (max-width: 56.25em) {
+  .footer__container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 .footer {
   background-color: #333;
   padding: 5rem 0;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer__logo-box {
-  width: 7rem;
+  width: 15rem;
   margin: auto;
   margin-bottom: 6rem;
 }
 .footer__logo {
   width: 15rem;
   height: auto;
+  margin: auto;
 }
 .footer__navigation {
   border-top: 0.1rem solid #787878;
   padding-top: 1rem;
   width: 50%;
 }
+@media screen and (max-width: 56.25em) {
+  .footer__navigation {
+    width: 100%;
+  }
+}
 .footer__list {
   list-style: none;
   display: flex;
   gap: 2rem;
+}
+@media screen and (max-width: 37.5em) {
+  .footer__list {
+    flex-wrap: wrap;
+  }
 }
 .footer__link:link, .footer__link:visited {
   color: #787878;
@@ -318,6 +336,11 @@ body {
   width: 50%;
   border-top: 0.1rem solid #787878;
   padding-top: 1rem;
+}
+@media screen and (max-width: 56.25em) {
+  .footer .footer_copyright {
+    width: 100%;
+  }
 }
 
 .about__container {
@@ -1059,6 +1082,11 @@ body {
   z-index: 20;
   cursor: default;
 }
+@media screen and (max-width: 1450px) {
+  .popup__content {
+    flex-direction: column;
+  }
+}
 .popup__content--visible {
   transform: scale(1);
   opacity: 1;
@@ -1069,6 +1097,11 @@ body {
 }
 .popup__left {
   width: 40%;
+}
+@media screen and (max-width: 1450px) {
+  .popup__left {
+    display: none;
+  }
 }
 .popup__right {
   position: relative;
@@ -1081,6 +1114,12 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 1450px) {
+  .popup__right {
+    width: 100%;
+    box-shadow: none;
+  }
+}
 .popup__image {
   width: 100%;
   display: block;
@@ -1091,6 +1130,11 @@ body {
   column-gap: 4rem;
   column-rule: 1px solid #eee;
   hyphens: auto;
+}
+@media screen and (max-width: 450px) {
+  .popup__text {
+    display: none;
+  }
 }
 .popup__close {
   transition: all 0.3s;

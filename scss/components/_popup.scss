@@ -41,6 +41,10 @@
     z-index: 20;
     cursor: default;
 
+    @media screen and (max-width: 1450px) {
+      flex-direction: column;
+    }
+
     &--visible {
       transform: scale(1);
       opacity: 1;
@@ -53,6 +57,9 @@
 
   &__left {
     width: 40%;
+    @media screen and (max-width: 1450px) {
+      display: none;
+    }
   }
   &__right {
     position: relative;
@@ -64,6 +71,10 @@
     padding: 3rem;
     border-radius: 0.5rem;
     box-shadow: 0 2rem 4rem rgba(black, 0.3);
+    @media screen and (max-width: 1450px) {
+      width: 100%;
+      box-shadow: none;
+    }
   }
   &__image {
     width: 100%;
@@ -75,6 +86,9 @@
     column-gap: 4rem;
     column-rule: 1px solid variables.$color-grey-light-2;
     hyphens: auto;
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
   }
 
   &__close {
