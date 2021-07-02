@@ -392,9 +392,30 @@ body {
   background-image: linear-gradient(105deg, rgba(239, 239, 239, 0.9) 0%, rgba(239, 239, 239, 0.9) 50%, transparent 50%), url("../../assets/images/Hero4.jpg");
   background-size: cover;
 }
+@media screen and (max-width: 75em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(239, 239, 239, 0.9) 0%, rgba(239, 239, 239, 0.9) 65%, transparent 50%), url("../../assets/images/Hero4.jpg");
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(239, 239, 239, 0.9) 0%, rgba(239, 239, 239, 0.9) 100%, transparent 50%), url("../../assets/images/Hero4.jpg");
+  }
+}
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+@media screen and (max-width: 75em) {
+  .book__form {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 75em) {
+  .book__form {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .btn {
@@ -885,6 +906,14 @@ body {
   object-fit: cover;
 }
 
+@media screen and (max-width: 37.5em) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1;
 }
@@ -900,6 +929,11 @@ body {
   display: block;
   width: 90%;
   color: #3d3d3d;
+}
+@media screen and (max-width: 37.5em) {
+  .form__input {
+    width: 100%;
+  }
 }
 .form__input::-webkit-input-placeholder {
   color: #787878;
@@ -937,9 +971,20 @@ body {
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 37.5em) {
+  .form__group--flexed {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 .form__radio-group {
   width: 45%;
   display: inline-block;
+}
+@media screen and (max-width: 37.5em) {
+  .form__radio-group {
+    width: 100%;
+  }
 }
 .form__radio-label {
   font-size: 1.8rem;
