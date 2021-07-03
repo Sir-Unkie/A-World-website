@@ -20,13 +20,49 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
   }
 
-  &__logo-box {
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin: auto;
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__list {
+      display: flex;
+
+      &-item {
+        list-style: none;
+        padding: 0 3rem;
+        @include mixins.respond(phone) {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    &__link,
+    &__link:visited,
+    &__link:link {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+    }
+
+    &__link:hover {
+      color: variables.$secondary-color-medium;
+    }
   }
 
-  &__logo {
+  .navigation__logo-box {
+    // position: absolute;
+    // top: 40px;
+    // left: 40px;
+  }
+
+  .navigation__logo {
     height: 55px;
   }
 
