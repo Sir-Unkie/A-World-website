@@ -58,6 +58,9 @@
   &__link:hover {
     color: variables.$secondary-color-medium;
   }
+  @include mixins.respond(phone) {
+    display: none;
+  }
 }
 
 .navigation__logo-box {
@@ -74,5 +77,44 @@
   height: 5.5rem;
   @include mixins.respond(phone) {
     height: 4rem;
+  }
+}
+
+.navigation-mobile {
+  display: block;
+  visibility: hidden;
+  right: 0;
+  top: 0;
+  position: fixed;
+  color: white;
+  width: 50vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(59, 59, 59, 0.9);
+  opacity: 0;
+  transform: translateX(70%);
+  transition: all 0.3s;
+
+  &__list {
+    list-style: none;
+    &-item {
+    }
+  }
+
+  &__link {
+  }
+}
+
+.shown {
+  @media screen and (min-width: 600px) {
+    transform: translateX(70%);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @include mixins.respond(phone) {
+    transform: translateX(0%);
+    visibility: visible;
+    opacity: 1;
   }
 }

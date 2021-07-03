@@ -18,6 +18,13 @@ const close = document.querySelector('.popup__close');
 const sectionAbout = document.querySelector('#section-about');
 const navigation = document.querySelector('.navigation');
 const header = document.querySelector('.header');
+const burger = document.querySelector('.burger');
+const mobileNav = document.querySelector('.navigation-mobile');
+
+burger.addEventListener('click', () => {
+  mobileNav.classList.toggle('shown');
+  burger.classList.toggle('burger--close');
+});
 
 myBtn.addEventListener('click', () => {
   back.classList.toggle('popup--visible');

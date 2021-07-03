@@ -1,0 +1,68 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.burger {
+  display: none;
+  position: fixed;
+  z-index: 25;
+  right: 2rem;
+  top: 2rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0.4rem 1rem rgba(black, 0.3);
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 0.4rem 2rem rgba(black, 0.2);
+    transform: translateY(-2px);
+  }
+
+  @include mixins.respond(phone) {
+    display: block;
+  }
+  .line-1 {
+    position: absolute;
+    width: 60%;
+    border-bottom: 0.4rem solid variables.$color-grey-dark-2;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    transition: all 0.3s;
+  }
+  .line-2 {
+    position: absolute;
+    width: 60%;
+    border-bottom: 0.4rem solid variables.$color-grey-dark-2;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s;
+  }
+  .line-3 {
+    position: absolute;
+    width: 60%;
+    border-bottom: 0.4rem solid variables.$color-grey-dark-2;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 50%;
+    transition: all 0.3s;
+  }
+
+  &--close .line-1 {
+    transform: translate(-50%, -50%) rotate(220deg);
+    top: 50%;
+    left: 50%;
+  }
+  &--close .line-2 {
+    transform: translate(-50%, -50%) rotate(330deg);
+
+    opacity: 0;
+  }
+  &--close .line-3 {
+    transform: translate(-50%, -50%) rotate(-220deg);
+    top: 50%;
+    left: 50%;
+  }
+}
