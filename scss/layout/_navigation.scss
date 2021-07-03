@@ -1,0 +1,78 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 4rem);
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  transition: all 0.3s;
+  color: white;
+
+  @include mixins.respond(tab-port) {
+    top: 2rem;
+    padding: 0;
+    width: 100%;
+    // 1rem=8px, 8/16=50%
+  }
+
+  &--sticky {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.911);
+    z-index: 25;
+    top: 0;
+    color: black;
+    border: none;
+  }
+
+  &--sticky &__link:hover {
+    color: variables.$primary-color-medium;
+  }
+
+  &__list {
+    display: flex;
+
+    &-item {
+      list-style: none;
+      padding: 0 3rem;
+      @include mixins.respond(phone) {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+  }
+
+  &__link:hover {
+    color: variables.$secondary-color-medium;
+  }
+}
+
+.navigation__logo-box {
+  // position: absolute;
+  // top: 40px;
+  // left: 40px;
+  margin-left: 3rem;
+  @include mixins.respond(phone) {
+    margin-left: 1rem;
+  }
+}
+
+.navigation__logo {
+  height: 5.5rem;
+  @include mixins.respond(phone) {
+    height: 4rem;
+  }
+}

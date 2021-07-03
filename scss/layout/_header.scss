@@ -9,7 +9,7 @@
       rgba(variables.$primary-color-light, 0.7),
       rgba(variables.$primary-color-dark, 0.7)
     ),
-    url(../assets/images/Hero11.jpg);
+    url(../assets/images/Hero11-medium.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
@@ -18,52 +18,6 @@
   }
   @include mixins.respond(phone) {
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
-  }
-
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    align-items: center;
-    margin: auto;
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &__list {
-      display: flex;
-
-      &-item {
-        list-style: none;
-        padding: 0 3rem;
-        @include mixins.respond(phone) {
-          padding: 0 1rem;
-        }
-      }
-    }
-
-    &__link,
-    &__link:visited,
-    &__link:link {
-      text-decoration: none;
-      color: white;
-      font-size: 2rem;
-    }
-
-    &__link:hover {
-      color: variables.$secondary-color-medium;
-    }
-  }
-
-  .navigation__logo-box {
-    // position: absolute;
-    // top: 40px;
-    // left: 40px;
-  }
-
-  .navigation__logo {
-    height: 55px;
   }
 
   &__text-box {

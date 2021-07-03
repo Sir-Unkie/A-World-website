@@ -245,7 +245,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../assets/images/Hero11.jpg);
+  background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../assets/images/Hero11-medium.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
@@ -259,40 +259,6 @@ body {
   .header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
   }
-}
-.header .navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  align-items: center;
-  margin: auto;
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.header .navigation__list {
-  display: flex;
-}
-.header .navigation__list-item {
-  list-style: none;
-  padding: 0 3rem;
-}
-@media screen and (max-width: 37.5em) {
-  .header .navigation__list-item {
-    padding: 0 1rem;
-  }
-}
-.header .navigation__link, .header .navigation__link:visited, .header .navigation__link:link {
-  text-decoration: none;
-  color: white;
-  font-size: 2rem;
-}
-.header .navigation__link:hover {
-  color: #ffda33;
-}
-.header .navigation__logo {
-  height: 55px;
 }
 .header__text-box {
   position: absolute;
@@ -324,12 +290,12 @@ body {
   align-items: center;
 }
 .footer__logo-box {
-  width: 15rem;
+  width: 10rem;
   margin: auto;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 .footer__logo {
-  width: 15rem;
+  width: 10rem;
   height: auto;
   margin: auto;
 }
@@ -395,6 +361,77 @@ body {
   .about__text,
 .about__images {
     width: 100%;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 4rem);
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  transition: all 0.3s;
+  color: white;
+}
+@media screen and (max-width: 56.25em) {
+  .navigation {
+    top: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+.navigation--sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.911);
+  z-index: 25;
+  top: 0;
+  color: black;
+  border: none;
+}
+.navigation--sticky .navigation__link:hover {
+  color: #28f0df;
+}
+.navigation__list {
+  display: flex;
+}
+.navigation__list-item {
+  list-style: none;
+  padding: 0 3rem;
+}
+@media screen and (max-width: 37.5em) {
+  .navigation__list-item {
+    padding: 0 1rem;
+  }
+}
+.navigation__link, .navigation__link:visited, .navigation__link:link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 2rem;
+}
+.navigation__link:hover {
+  color: #ffda33;
+}
+
+.navigation__logo-box {
+  margin-left: 3rem;
+}
+@media screen and (max-width: 37.5em) {
+  .navigation__logo-box {
+    margin-left: 1rem;
+  }
+}
+
+.navigation__logo {
+  height: 5.5rem;
+}
+@media screen and (max-width: 37.5em) {
+  .navigation__logo {
+    height: 4rem;
   }
 }
 
@@ -667,13 +704,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card__side .card__picture--1 {
-  background-image: linear-gradient(to right bottom, #fa9600, #d19410), url("../../assets/images/Hero6.jpg");
+  background-image: linear-gradient(to right bottom, #fa9600, #d19410), url("../../assets/images/for cards/Hero6.jpg");
 }
 .card__side .card__picture--2 {
-  background-image: linear-gradient(to right bottom, #28f0df, #0a8f84), url("../../assets/images/Hero5.jpg");
+  background-image: linear-gradient(to right bottom, #28f0df, #0a8f84), url("../../assets/images/for cards/Hero5.jpg");
 }
 .card__side .card__picture--3 {
-  background-image: linear-gradient(to right bottom, #6b68fd, #1409aa), url("../../assets/images/Hero2.jpg");
+  background-image: linear-gradient(to right bottom, #6b68fd, #1409aa), url("../../assets/images/for cards/Hero2.jpg");
 }
 .card:hover .card__side--front {
   transform: rotateY(180deg);
@@ -1077,7 +1114,7 @@ body {
 }
 
 .popup {
-  z-index: 10;
+  z-index: 30;
   height: 100vh;
   width: 100vw;
   position: fixed;
