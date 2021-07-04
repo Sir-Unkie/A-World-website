@@ -23,12 +23,12 @@
   align-items: center;
 
   &__logo-box {
-    width: 10rem;
+    width: 20rem;
     margin: auto;
     margin-bottom: 3rem;
   }
   &__logo {
-    width: 10rem;
+    width: 20rem;
     height: auto;
     margin: auto;
   }
@@ -52,9 +52,6 @@
     @include mixins.respond(phone) {
       flex-wrap: wrap;
     }
-  }
-
-  &__item {
   }
 
   &__link {
