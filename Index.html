@@ -73,7 +73,7 @@
             >Travel and discover the world</span
           >
         </h1>
-        <a id="kkk" class="btn btn--white btn--animated" href="#"
+        <a id="header-btn" class="btn btn--white btn--animated" href="#"
           >Discover a new place
         </a>
       </div>
@@ -263,7 +263,7 @@
           </div>
         </div>
         <div class="u-center-text u-mt-huge">
-          <a href="#section-book" class="btn btn--green">Discover all tours</a>
+          <a href="#section-book" class="btn btn--green">Get a Tour!</a>
         </div>
       </section>
       <section class="section-stories" id="section-stories">
@@ -320,7 +320,9 @@
             </div>
           </div>
           <div class="u-center-text u-mt-huge">
-            <a href="#" class="btn btn--green">Read all stories &rarr;</a>
+            <a href="" class="btn btn--green" id="read-stories"
+              >Read all stories &rarr;</a
+            >
           </div>
         </div>
       </section>
@@ -379,7 +381,9 @@
                   </div>
                 </div>
                 <div class="form__group">
-                  <button class="btn btn--green">Next step</button>
+                  <button class="btn btn--green" id="form-submit" type="submit">
+                    Next step
+                  </button>
                 </div>
               </form>
             </div>
@@ -423,7 +427,30 @@
         </div>
       </div>
     </footer>
-    <div class="popup" id="popup">
+    <div class="popup" id="popup-demo">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img
+            class="popup__image"
+            src="./assets/images/Demo.jpg"
+            alt="Tour Photo"
+          />
+        </div>
+        <div class="popup__right">
+          <button class="popup__close">&times;</button>
+          <h2 class="heading-secondary u-mb-medium">
+            This is just a demo website
+          </h2>
+          <p class="paragrapgh u-mb-medium">
+            More interactive with the full functionality react projects can be
+            found on my portfolio website.
+          </p>
+
+          <a href="#section-book" class="btn btn--green">Portfolio webpage</a>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="popup-main">
       <div class="popup__content">
         <div class="popup__left">
           <img
@@ -453,7 +480,7 @@
             adipisicing elit. Mollitia dolorum voluptate placeat minus quia
             provident, fugit porro repudiandae reprehenderit doloremque.
           </p>
-          <a href="" class="btn btn--green">Book now</a>
+          <a href="#section-book" class="btn btn--green">Book now</a>
         </div>
       </div>
     </div>
