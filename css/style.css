@@ -245,7 +245,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../assets/images/Hero11-medium.jpg);
+  background-image: linear-gradient(to right bottom, rgba(160, 248, 241, 0.7), rgba(10, 143, 132, 0.7)), url(../assets/images/Hero11-medium.webp);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
