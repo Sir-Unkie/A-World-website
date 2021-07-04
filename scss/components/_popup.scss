@@ -7,7 +7,7 @@
   position: fixed;
   top: 0%;
   left: 0%;
-  background-color: rgba(black, 0.8);
+  background-color: rgba(rgb(43, 43, 43), 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@
   visibility: hidden;
   transition: all 0.3s;
   cursor: pointer;
+  backdrop-filter: blur(8px);
 
   // &:target {
   //   opacity: 1;
