@@ -36,3 +36,8 @@ body {
     // 1rem=8px, 8/16=50%
   }
 }
+
+::selection {
+  background-color: variables.$primary-color-medium;
+  color: white;
+}
