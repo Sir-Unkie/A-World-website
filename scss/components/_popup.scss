@@ -11,13 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //   display: none;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
   cursor: pointer;
   backdrop-filter: blur(8px);
-
+  backface-visibility: hidden;
   // &:target {
   //   opacity: 1;
   //   visibility: visible;

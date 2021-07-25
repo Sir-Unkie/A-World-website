@@ -453,7 +453,6 @@ body {
 
 .navigation-mobile {
   display: block;
-  display: none;
   visibility: hidden;
   right: 0;
   top: 0;
@@ -505,7 +504,6 @@ body {
 
 @media screen and (min-width: 600px) {
   .shown {
-    display: block;
     transform: translateX(70%);
     visibility: hidden;
     opacity: 0;
@@ -1213,6 +1211,7 @@ body {
   transition: all 0.3s;
   cursor: pointer;
   backdrop-filter: blur(8px);
+  backface-visibility: hidden;
 }
 .popup--visible {
   opacity: 1;
