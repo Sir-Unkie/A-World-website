@@ -89,6 +89,7 @@
 
 .navigation-mobile {
   display: block;
+  display: none;
   visibility: hidden;
   right: 0;
   top: 0;
@@ -148,6 +149,7 @@
 
 .shown {
   @media screen and (min-width: 600px) {
+    display: block;
     transform: translateX(70%);
     visibility: hidden;
     opacity: 0;
