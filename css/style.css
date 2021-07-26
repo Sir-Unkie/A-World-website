@@ -462,6 +462,7 @@ body {
   background-color: rgba(26, 26, 26, 0.9);
   opacity: 0;
   transform: translateX(70%);
+  transition: all 0.3s;
 }
 .navigation-mobile__list {
   list-style: none;

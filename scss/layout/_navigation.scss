@@ -100,7 +100,7 @@
   background-color: hsla(0, 0%, 10%, 0.9);
   opacity: 0;
   transform: translateX(70%);
-  // transition: all 0.3s;
+  transition: all 0.3s;
 
   &__list {
     list-style: none;
