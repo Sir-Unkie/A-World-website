@@ -14,6 +14,7 @@ const navigation = document.querySelector('.navigation');
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('.navigation-mobile');
+const Nav = document.querySelector('.navigation');
 const toursSection = document.querySelector('#section-tours');
 const navLogo = document.querySelector('.navigation__logo');
 const btnDummy = document.querySelector('#read-stories');
@@ -85,7 +86,7 @@ popupMainContent.addEventListener('click', e => {
 
 // burger button handler start ///////////////////////////////
 burger.addEventListener('click', () => {
-  mobileNav.classList.toggle('shown');
+  Nav.classList.toggle('shown');
   burger.classList.toggle('burger--close');
 });
 
