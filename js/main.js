@@ -13,7 +13,6 @@ const sectionAbout = document.querySelector('#section-about');
 const navigation = document.querySelector('.navigation');
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger');
-const mobileNav = document.querySelector('.navigation-mobile');
 const Nav = document.querySelector('.navigation');
 const toursSection = document.querySelector('#section-tours');
 const navLogo = document.querySelector('.navigation__logo');
