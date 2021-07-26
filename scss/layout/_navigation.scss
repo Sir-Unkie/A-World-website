@@ -12,7 +12,6 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 25;
-  transition: all 0.3s;
   color: white;
 
   @include mixins.respond(tab-port) {
@@ -71,6 +70,7 @@
     text-decoration: none;
     color: inherit;
     font-size: 2rem;
+    transition: all 0.3s;
     @include mixins.respond(phone) {
       color: white;
       text-decoration: none;
