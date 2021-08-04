@@ -103,19 +103,16 @@
     color: variables.$secondary-color-medium;
   }
   @include mixins.respond(phone) {
-    // display: block;
     visibility: hidden;
     top: 0;
     left: 100%;
     position: fixed;
-
     width: 50vw;
     height: 100vh;
     z-index: 20;
     background-color: hsla(0, 0%, 10%, 0.9);
     opacity: 0;
     transition: all 0.3s;
-    // transform: translateX(70%);
   }
 
   &.shown {
