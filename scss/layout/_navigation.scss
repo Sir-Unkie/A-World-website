@@ -105,8 +105,8 @@
   @include mixins.respond(phone) {
     // display: block;
     visibility: hidden;
-    right: -50%;
     top: 0;
+    left: 100%;
     position: fixed;
 
     width: 50vw;
@@ -115,13 +115,13 @@
     background-color: hsla(0, 0%, 10%, 0.9);
     opacity: 0;
     transition: all 0.3s;
-    transform: translateX(70%);
+    // transform: translateX(70%);
   }
 
   &.shown {
     visibility: visible;
     opacity: 1;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
