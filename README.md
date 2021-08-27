@@ -16,9 +16,22 @@ This project is a landing page with a heavy focus on advanced SCSS styling and a
 
 ## Advanced styling and animation
 
+### Hero section styling and animation
+
 ![Animations](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour1.gif)
+
+### Cards and images
+
 ![Animations2](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour2.gif)
+
+### Background video and backdrop filters
+
+![Animations3](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour3-min.gif)
+
+### Form styling
+
+![Animations4](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour4-min.gif)
 
 ## Responsive design
 
-![Responsive design](https://github.com/Sir-Unkie/e-commerce-trainings/blob/master/READMEfiles/Ecom3.gif)
+![Responsive design](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour5-min.gif)
