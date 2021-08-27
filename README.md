@@ -34,4 +34,4 @@ This project is a landing page with a heavy focus on advanced SCSS styling and a
 
 ## Responsive design
 
-![Responsive design](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour5-min.gif)
+![Responsive design](https://s9.gifyu.com/images/Jour5-min.gif)
