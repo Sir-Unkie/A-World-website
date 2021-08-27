@@ -18,7 +18,6 @@ This project is a landing page with a heavy focus on advanced SCSS styling and a
 
 ![Animations](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour1.gif)
 ![Animations2](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour2.gif)
-![Animations3](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Jour3.gif)
 
 ## Responsive design
 
