@@ -1,4 +1,4 @@
-# E-commerce demo website
+# ON Journey demo website
 
 ![Cover photo](https://github.com/Sir-Unkie/ON-JOURNEY-DEMO-WEBSITE/blob/master/readmeFiles/Cover.png)
 This is a project for a fictional travel agency called ON Journey.
